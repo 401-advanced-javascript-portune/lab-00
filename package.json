@@ -12,22 +12,13 @@
   },
   "author": "John Cokos",
   "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.8.0"
+  },
   "dependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.12.4",
     "express": "^4.17.1",
-    "jest": "^24.9.0",
     "jsdoc": "^3.6.3"
-  },
-  "directories": {
-    "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/401-advanced-javascript-portune/lab-00.git"
-  },
-  "bugs": {
-    "url": "https://github.com/401-advanced-javascript-portune/lab-00/issues"
-  },
-  "homepage": "https://github.com/401-advanced-javascript-portune/lab-00#readme"
+  }
 }

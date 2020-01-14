@@ -1,7 +1,18 @@
 'use strict';
 
-let proofoflife = module.exports = {};
+/**
+ * Proof Of Life
+ * @module pol
+ */
 
-proofoflife.isAlive = function(dead) {
+/**
+ * Proof of life - will return a boolean value
+ * @param dead
+ * @returns {boolean}
+ * @function isAlive
+ */
+const isAlive = function(dead = false) {
   return !(dead);
 };
+
+module.exports = {isAlive};

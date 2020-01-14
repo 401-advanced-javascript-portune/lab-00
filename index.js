@@ -1,15 +1,34 @@
 'use strict';
 
-const pol = require('./pol.js');
-const http = require('http');
+/**
+ * Simple Server
+ * @module index
+ */
 
-const requestHandler = (req,res) => {
+
+const express = require('express');
+
+const pol = require('./pol.js');
+
+const app = express();
+
+app.use('/docs', express.static('./docs'));
+
+/**
+ * / Request Handler (All Routes)
+ * @param req
+ * @param res
+ */
+
+app.get('/', requestHandler);
+
+function requestHandler(req,res) {
   res.setHeader('Content-Type', 'text/html');
   res.statusCode = 200;
-  res.write( pol.isAlive().toString() );
+  let isItAlive = pol.isAlive(req.query.dead).toString();
+  res.write( isItAlive );
   res.end();
-};
+}
 
-const app = http.createServer(requestHandler);
 app.listen(process.env.PORT, () => console.log('server up') );
 
